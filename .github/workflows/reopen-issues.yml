@@ -9,7 +9,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - run: gh issue edit "$NUMBER" --remove-label done
+      - run: gh issue edit "$NUMBER" --remove-label done --add-label active
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
