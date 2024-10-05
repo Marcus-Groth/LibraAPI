@@ -9,9 +9,11 @@ jobs:
     permissions:
       issues: write
     steps:
-      - run: gh issue edit "$NUMBER" --add-label "$LABELS"
+      - run: gh issue edit "$NUMBER" --remove-label "$REMOVE_LABELS"
+      - run: gh issue edit "$NUMBER" --add-label "$ADD_LABELS"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number }}
-          LABELS: done
+          REMOVE_LABELS: active 
+          Add_LABELS: done
