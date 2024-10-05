@@ -15,4 +15,4 @@ jobs:
         with:
           project: Library Management System
           column: In progress
-          repo-token: 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
+          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
