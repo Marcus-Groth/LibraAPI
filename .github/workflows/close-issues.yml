@@ -2,7 +2,7 @@ name: Close issues
 on:
   issues:
     types:
-      - opened
+      - closed
 jobs:
   close_issues:
     runs-on: ubuntu-latest
