@@ -1,4 +1,4 @@
-name: Move assigned issues into in-progress
+name: Move new issues into In Progress
 
 on:
   issues:
@@ -12,4 +12,4 @@ jobs:
         with:
           project: Library Management System
           column: In progress
-          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
